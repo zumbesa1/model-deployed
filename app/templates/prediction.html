@@ -1,0 +1,65 @@
+{% extends "layout/base.html" %}
+{% block stylesheet %}
+<link rel="stylesheet" href="static/css/style.css">{% endblock %}
+
+
+
+{% block content %}
+<main role="main" class="container">
+  <div class="container center-align">
+    <div class="starter-template">
+      <hr style="padding-top: 100px;">
+      <div class="container center-align">
+        <div class="row">
+          <div class="col">
+            <div class="card card-margin">
+              <h3><b>{{album['name']}}</b></h3>
+              <img src="{{album['img_uri']}}" style="width:100%">
+              <p class="title">{{track['name']}}</p>
+              {% for artist in track['artists'] %}
+              <p style="margin-bottom: 5px;">{{artist['name']}}</p>
+              {% endfor %}
+              <p class="title"><b>{{mood}}</b></p>
+              <iframe src="https://open.spotify.com/embed/track/{{track['id']}}" width="100%" height="80"
+                frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+        </div>
+        <hr style="padding-top: 10px;">
+        <div class="row">
+          <div class="col center-align" style="margin-top: 30px; margin-bottom: 20px;">
+            <h2>You might also like:</h2>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          {% for recommendation in recommendations %}
+          <div class="card mb-3" style="max-width: 540px; height: 350px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <div class="center_my_card">
+                  <img src="{{album['img_uri']}}" class="img-fluid" />
+                  <p class="card-text title">
+                    <small class="text-muted">Is also <b>{{recommendation['mood']}}</b></small>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body center_my_card">
+                  <h5 class="card-title">{{album['name']}}</h5>
+                  <p class="title">{{recommendation['name']}}</p>
+                  {% for artist in recommendation['artists'] %}
+                  <p class="card-text" style="margin-bottom: 2.5px;">{{artist['name']}}</p>
+                  {% endfor %}
+                  <iframe src="https://open.spotify.com/embed/track/{{recommendation['id']}}" width="80%" height="80"
+                    style="margin-top: 12.5px;" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+</main>
+{% endblock %}

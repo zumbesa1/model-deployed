@@ -1,0 +1,132 @@
+/* Your CSS Styling 
+*/
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: Helvetica;
+}
+
+.center-align {
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-size: 10;
+}
+
+.center_my_card {
+  padding: 70px 0;
+}
+
+.title {
+  margin-top: 15px;
+  color: grey;
+  font-size: 18px;
+}
+
+.my-audio {
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card-margin {
+  margin-bottom: 15px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #1DB954;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+}
+
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.navbar-toggler-icon {
+  background-image: beige;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+.medium-font {
+  font-size: 35px
+}
+.small-font{
+  font-size: 25px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 70px 0 -40px auto;
+  /* Pad bottom by footer height */
+  padding: 0 0 40px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+
+/* Genericon social icon styles
+---------------------------------------------------- */
+.genericon-github:before,
+.genericon-linkedin:before,
+.genericon-twitter:before {
+    -webkit-font-smoothing: antialiased;
+    font: normal 32px/1 'Genericons';
+    vertical-align: middle;
+}
+
+.genericon-footer {
+    margin-left: 45%;
+    bottom: 10px;
+}
+
+.social-icons {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0;
+}
+
+/* Error styles
+---------------------------------------------------- */
+.error-404-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -285px;
+    margin-top: -120px;
+}

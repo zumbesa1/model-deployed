@@ -1,0 +1,29 @@
+{% extends "layout/base.html" %}
+{% block stylesheet %}<link rel="stylesheet" href="static/css/style.css">{% endblock %}
+
+
+
+{% block content %}
+<main role="main" class="container">
+  <div class="container">
+    <div class="starter-template">
+      <hr style="padding-top: 100px;">
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <form method="POST" action="" enctype="multipart/form-data">
+                <div class="form-group ">
+                  <h1 class="small-font" style="color:MediumSeaGreen;"><b>Get The Mood Out Of Your Favorite Song</b></h1>
+                  <input class="form-control" type="text" name="song_uri" placeholder="Enter Spotify Song Link" style="margin-top: 20px;">
+                  <button type="submit" class="button" value="Submit" style="margin-top: 10px;">GO</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

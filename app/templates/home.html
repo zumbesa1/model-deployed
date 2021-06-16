@@ -1,0 +1,76 @@
+{% extends "layout/base.html" %}
+{% block stylesheet %}
+<link rel="stylesheet" href="static/css/home-style.css">{% endblock %}
+
+
+
+{% block content %}
+
+<!-- The App Section -->
+<div class="container container-home">
+    <hr style="padding-top: 50px; background-color: white;">
+    <div class="row">
+        <div class="column-66">
+            <h1 class="large-font"><b>Let Us Guess Your Favorite Songs</b></h1>
+            <h1 class="medium-font" style="color:MediumSeaGreen;"><b>Get The Mood Out Of Your Favorite Song</b></h1>
+            <p> Choose your favorite song from Spotify and copy the link into the input field. We will show
+                you in which mood it is.</p>
+            <form action="/mood">
+                <input class="button" type="submit" value="TRY IT OUT" />
+            </form>
+        </div>
+        <div class="column-33">
+            <img src="{{ url_for('static', filename='vorschau_card.jpg') }}" alt="AppBILD" height="400px">
+        </div>
+    </div>
+    <hr style="padding-top: 10px;">
+    <div class="row">
+        <div class="col">
+            <h1 class="medium-font"><b>Step 1</b></h1>
+            <h1 class="small-font" style="color:MediumSeaGreen;"><b>Copy The Link Of Your Favorite Song</b></h1>
+            <img src="{{ url_for('static', filename='copy_link.jpg') }}" alt="AppBILD" height="400px">
+        </div>
+    </div>
+    <hr style="padding-top: 10px;">
+    <div class="row">
+        <div class="col">
+            <h1 class="medium-font"><b>Step 2</b></h1>
+            <h1 class="small-font" style="color:MediumSeaGreen;"><b>Paste The Link Into The Given Inputfield And Press
+                    The Button</b></h1>
+            <img src="{{ url_for('static', filename='paste_link.jpg') }}" alt="AppBILD" height="400px">
+        </div>
+    </div>    
+    <hr style="padding-top: 10px;">
+    <div class="row">
+        <div class="column-66">
+            <h1 class="medium-font"><b>Step 3</b></h1>
+            <h1 class="small-font" style="color:	#1DB954;"><b>Give It A Try</b></h1>
+        </div>
+        <form action="/mood">
+            <input class="button" style="margin-top: 80px;" type="submit" value="TRY IT OUT" />
+        </form>
+    </div>
+</div>
+<hr style="padding-top: 50px;">
+
+<!-- Clarity Section -->
+<div class="container container-home" style="background-color:#f1f1f1">
+    <div class="row">
+        <div class="column-33">
+            <img src="https://i.computer-bild.de/imgs/1/2/9/0/9/6/7/5/Spotify-Logo-658x370-b71460ef68bd715e.jpg"
+                alt="AppBILD" width="335" height="300">
+        </div>
+        <div class="column-66">
+            <h1 class="large-font"><b>Do You Need New Songs in Your Mood? </b></h1>
+            <h1 class="medium-font" style="color:red;"><b>Let Us Do The Job For You</b></h1>
+            <p><span style="font-size:24px">SAVE TIME SEARCHING.</span>
+            </p>
+
+            <form action="/playlist">
+                <input class="button" type="submit" value="TRY IT OUT" />
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
